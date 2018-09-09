@@ -20,10 +20,10 @@ const MapWithMarkers = withScriptjs(withGoogleMap(props =>
     defaultZoom={5}
     defaultCenter={{ lat: 50.4547, lng: 30.5238 }}
   >
-  {props.coordinates.map( ({lat, long}, index) => (
+  {props.coordinates.map( ({lat, lng}, index) => (
     <Marker
       key={index}
-      position={{ lat, lng: long }}
+      position={{ lat, lng }}
     />
   ))}
   </GoogleMap>
